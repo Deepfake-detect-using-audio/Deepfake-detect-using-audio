@@ -291,29 +291,29 @@ def main():
 
     ################ add a check here for webm, then run "THE" script##########################################
     ###################################################if video is not mp4 , change it to mpv############################################
-    if opts.test_video_path.split('.')[-1] != 'mp4':
-       def transcode(input_path: str, output_path: str):
-    # build your ffmpeg command as a list of arguments
-    cmd = [
-        "ffmpeg",
-        "-i", input_path,
-        "-c:v", "libx264",
-        "-preset", "slow",
-        "-crf", "22",
-        "-c:a", "aac",
-        "-b:a", "128k",
-        "-map_metadata", "0",
-        output_path
-    ]
+    # if opts.test_video_path.split('.')[-1] != 'mp4':
+    #    def transcode(input_path: str, output_path: str):
+    # # build your ffmpeg command as a list of arguments
+    #     cmd = [
+    #         "ffmpeg",
+    #         "-i", input_path,
+    #         "-c:v", "libx264",
+    #         "-preset", "slow",
+    #         "-crf", "22",
+    #         "-c:a", "aac",
+    #         "-b:a", "128k",
+    #         "-map_metadata", "0",
+    #         output_path
+    #     ]
 
-    # run it and wait for it to finish
-    # check=True will raise CalledProcessError on non-zero exit
-    subprocess.run(cmd, check=True)
+    #     # run it and wait for it to finish
+    #     # check=True will raise CalledProcessError on non-zero exit
+    #     subprocess.run(cmd, check=True)
 
-if __name__ == "__main__":
-    inp  = "input with spaces.webm"
-    outp = "output with spaces.mp4"
-    transcode(inp, outp) 
+    #     if __name__ == "__main__":
+    # inp  = opts.test_video_path;
+    # outp = "output with spaces.mp4"
+    # transcode(inp, outp) 
 
     if opts.test_video_path is not None:
     ############################Treate webm as a video and not a normal file###################################

@@ -17,5 +17,3 @@ CUDA_VISIBLE_DEVICES=8 python detect.py --test_video_path /home/xxxx/fake_videos
 ```
 
 ---
-
-Any questions please contact chfeng@umich.edu, I will try to respond ASAP, sorry for any delay before. 
